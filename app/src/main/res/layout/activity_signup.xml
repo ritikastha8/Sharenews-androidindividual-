@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.activity.SignupActivity">
+
+    <ImageView
+        android:id="@+id/bgg"
+        android:layout_width="420dp"
+        android:layout_height="372dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/greenbg" />
+
+    <ImageView
+        android:id="@+id/boox"
+        android:layout_width="342dp"
+        android:layout_height="544dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="332dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bo" />
+
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="204dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/green"
+        android:text="SIGN UP "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/boox"
+        app:layout_constraintTop_toBottomOf="@+id/edittabpasswoord" />
+
+    <TextView
+        android:id="@+id/textsignup"
+        android:layout_width="272dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        android:textSize="56sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/texttocontinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Create your Account"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textsignup" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edittabfirstnammee"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="@+id/boox"
+        app:layout_constraintTop_toTopOf="@+id/boox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editFName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edittabemail"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/boox"
+        app:layout_constraintTop_toBottomOf="@+id/edittablastname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editEmail"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edittabphone"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/boox"
+        app:layout_constraintTop_toBottomOf="@+id/edittabemail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:id="@+id/editContact"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edittabpasswoord"
+        android:layout_width="264dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/boox"
+        app:layout_constraintTop_toBottomOf="@+id/edittabphone"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:id="@+id/editPassword"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edittablastname"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/boox"
+        app:layout_constraintTop_toBottomOf="@+id/edittabfirstnammee">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/editLName"
+            android:layout_height="wrap_content"
+            android:hint="Last name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

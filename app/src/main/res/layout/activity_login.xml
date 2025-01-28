@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="420dp"
+        android:layout_height="372dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/greenbg" />
+
+    <ImageView
+        android:id="@+id/boxx"
+        android:layout_width="324dp"
+        android:layout_height="441dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="372dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bo" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="204dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="104dp"
+        android:backgroundTint="@color/green"
+        android:text="LOG IN "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/boxx"
+        app:layout_constraintStart_toStartOf="@+id/boxx" />
+
+    <TextView
+        android:id="@+id/textlogin"
+        android:layout_width="207dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="LOG IN"
+        android:textColor="@color/white"
+        android:textSize="58sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/texttocontinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="TO CONTINUE"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlogin" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/boxx"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittabpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/textInputLayout"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="91dp"
+        app:layout_constraintStart_toStartOf="@+id/boxx"
+        app:layout_constraintTop_toTopOf="@+id/boxx">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittabusernamee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/create"
+        android:layout_width="169dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Create your account?"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/boxx"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
+
+    <Button
+        android:id="@+id/btnregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/grey"
+        android:text="Sign Up"
+        android:textColor="@color/darkgreen"
+        app:layout_constraintEnd_toEndOf="@+id/boxx"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
