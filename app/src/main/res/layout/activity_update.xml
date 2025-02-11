@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/bggreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.UpdateActivity">
+
+    <ImageView
+        android:id="@+id/daarkk"
+
+        android:layout_width="473dp"
+        android:layout_height="375dp"
+        android:layout_marginBottom="284dp"
+        android:src="@drawable/dashboardd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/liightt"
+        android:layout_width="445dp"
+        android:layout_height="356dp"
+        android:layout_marginBottom="640dp"
+        android:src="@drawable/backgroundlight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagewhhitebox"
+        android:layout_width="370dp"
+        android:layout_height="514dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="136dp"
+        android:src="@drawable/whiterectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/greyyrect"
+        android:layout_width="311dp"
+        android:layout_height="408dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="208dp"
+        android:src="@drawable/greyrectangele"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editcategoryytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="152dp"
+        android:text="Edit Category"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/categorynamett"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:text="Category Name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editcategorid" />
+
+    <EditText
+        android:id="@+id/editcategorynamett"
+        android:layout_width="255dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categorynamett" />
+
+    <Button
+        android:id="@+id/btneditcategory"
+        android:layout_width="167dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="476dp"
+        android:backgroundTint="@color/bggreen"
+        android:text="Edit Category"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bttnback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="@color/bggreen"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/categoridd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:text="Category Id"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editcategoryytext" />
+
+    <EditText
+        android:id="@+id/editcategorid"
+        android:layout_width="255dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoridd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,4 +53,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    //for edit image
+    implementation("com.cloudinary:cloudinary-android:2.1.0")
+    implementation("com.squareup.picasso:picasso:2.8")
+
 }

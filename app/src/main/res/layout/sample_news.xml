@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="12dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/newsname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="News Name"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/categorynametexti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category Name"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"/>
+
+            <TextView
+                android:id="@+id/newsdesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="News Description" />
+
+            <TextView
+                android:id="@+id/lbllEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:textColor="@android:color/holo_blue_dark" />
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -5,6 +5,10 @@
     <color name="lightblue">#5D8AEC</color>
     <color name="green">#80C547</color>
     <color name="darkgreen">#498E10</color>
+    <color name="bggreen">#748F5F</color>
     <color name="grey">#009D9797</color>
+    <color name="yellow">#EDBF49</color>
+    <color name="btngreen">#BEE483</color>
+    <color name="gg">#689555</color>
 
 </resources>

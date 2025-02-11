@@ -17,5 +17,17 @@ interface UserRepository {
     fun forgetPassword(email:String,
                        callback: (Boolean, String) -> Unit)
     fun getCurrentUser() : FirebaseUser?
+    //edit userprofile
+    fun getUserById(userId: String,
+                       callback:(UserModel?,Boolean,String)->Unit)
+// get all-> userprofile
+    fun getAllUsers(callback:(List<UserModel>?,Boolean,String)->Unit)
+
+    //update userprofile
+
+    fun updateUser(userId: String,data:MutableMap<String,Any>,
+                      callback:(Boolean,String)->Unit){
+//        repo.updateUser(userId,data, callback)
+    }
 
 }

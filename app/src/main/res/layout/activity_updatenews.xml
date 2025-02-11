@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:background="@color/bggreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.UpdatenewsActivity">
+  <ImageView
+      android:id="@+id/darrkk"
+
+      android:layout_width="473dp"
+      android:layout_height="375dp"
+      android:layout_marginBottom="284dp"
+      android:src="@drawable/dashboardd"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+
+  <ImageView
+      android:id="@+id/lighht"
+      android:layout_width="445dp"
+      android:layout_height="356dp"
+      android:layout_marginBottom="640dp"
+      android:src="@drawable/backgroundlight"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <ImageView
+      android:id="@+id/imaggewhitebox"
+      android:layout_width="370dp"
+      android:layout_height="514dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="136dp"
+      android:src="@drawable/whiterectangle"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  <ImageView
+      android:id="@+id/secondwhite"
+      android:layout_width="370dp"
+      android:layout_height="517dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="332dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/whiterectangle" />
+
+  <ImageView
+      android:id="@+id/ggreyrect"
+      android:layout_width="311dp"
+      android:layout_height="408dp"
+      android:layout_marginStart="48dp"
+      android:layout_marginTop="208dp"
+      android:src="@drawable/greyrectangele"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:id="@+id/secondgrey"
+      android:layout_width="311dp"
+      android:layout_height="408dp"
+      android:layout_marginStart="48dp"
+      android:layout_marginTop="412dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/greyrectangele" />
+
+  <TextView
+      android:id="@+id/editcateggorytext"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="40dp"
+      android:layout_marginTop="152dp"
+      android:text="Edit News"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/cattegorynamet"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="80dp"
+      android:layout_marginTop="24dp"
+      android:text="Category Name"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/editnewsname" />
+
+  <EditText
+      android:id="@+id/edittcategorynamet"
+      android:layout_width="255dp"
+      android:layout_height="40dp"
+      android:layout_marginStart="80dp"
+      android:layout_marginTop="32dp"
+      android:ems="10"
+      android:inputType="text"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cattegorynamet" />
+
+  <Button
+      android:id="@+id/btnnedittcategory"
+      android:layout_width="167dp"
+      android:layout_height="55dp"
+      android:layout_marginStart="120dp"
+      android:layout_marginTop="708dp"
+      android:backgroundTint="@color/bggreen"
+      android:text="Edit Category"
+      android:textSize="15sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <Button
+      android:id="@+id/bttnbback"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="44dp"
+      android:backgroundTint="@color/bggreen"
+      android:text="Back"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/nnewsnamett"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="80dp"
+      android:layout_marginTop="40dp"
+      android:text="News Name"
+      android:inputType="textMultiLine"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/editcateggorytext" />
+
+  <EditText
+      android:id="@+id/editnewsname"
+      android:layout_width="255dp"
+      android:layout_height="40dp"
+      android:layout_marginStart="80dp"
+      android:layout_marginTop="16dp"
+      android:ems="10"
+      android:inputType="text"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/nnewsnamett" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="80dp"
+      android:layout_marginTop="32dp"
+      android:text="Description"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edittcategorynamet" />
+
+  <EditText
+    android:id="@+id/editdescription"
+    android:layout_width="256dp"
+    android:layout_height="172dp"
+    android:layout_marginStart="76dp"
+    android:layout_marginTop="12dp"
+    android:inputType="textMultiLine"
+    android:scrollbars="vertical"
+    android:gravity="top"
+    android:maxLines="10"
+    android:minLines="5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
