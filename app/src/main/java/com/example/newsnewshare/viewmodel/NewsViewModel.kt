@@ -1,5 +1,7 @@
 package com.example.newsnewshare.viewmodel
 
+import android.content.Context
+import android.net.Uri
 import androidx.lifecycle.MutableLiveData
 import com.example.newsnewshare.model.CategoryModel
 import com.example.newsnewshare.model.NewsModel
@@ -54,4 +56,10 @@ class NewsViewModel(val repo:NewsRepository) {
         }
 
     }
+
+    //edit image
+    fun uploadImage(context: Context, imageUri: Uri, callback: (String?) -> Unit){
+        repo.uploadImage(context, imageUri, callback)
+    }
+
 }

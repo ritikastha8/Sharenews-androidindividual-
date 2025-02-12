@@ -1,6 +1,8 @@
 package com.example.newsnewshare.repository
 
 
+import android.content.Context
+import android.net.Uri
 import com.example.newsnewshare.model.NewsModel
 
 interface NewsRepository {
@@ -20,4 +22,7 @@ interface NewsRepository {
 
     fun getAllNewss(callback:(List<NewsModel>?, Boolean, String)->Unit)
 
+    fun uploadImage(context: Context, imageUri: Uri, callback: (String?) -> Unit)
+
+    fun getFileNameFromUri(context: Context, uri: Uri): String?
 }

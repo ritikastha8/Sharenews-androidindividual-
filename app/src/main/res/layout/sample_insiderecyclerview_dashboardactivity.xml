@@ -23,6 +23,8 @@
             tools:layout_editor_absoluteY="254dp">
 
 
+
+
             <TextView
                 android:id="@+id/categoryidtext"
                 android:layout_width="wrap_content"

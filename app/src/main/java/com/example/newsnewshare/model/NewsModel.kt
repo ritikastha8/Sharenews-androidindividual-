@@ -9,9 +9,11 @@ data class NewsModel (
     var newsNamee: String="",
     var categoryNamme:String="",
     var descrription:String="",
+    var imageUrl: String=""
 ) : Parcelable {
 
     constructor(parcel: Parcel):this(
+        parcel.readString()?:"",
         parcel.readString()?:"",
         parcel.readString()?:"",
         parcel.readString()?:"",
@@ -26,6 +28,7 @@ data class NewsModel (
         parcel.writeString(newsNamee)
         parcel.writeString(categoryNamme)
         parcel.writeString(descrription)
+        parcel.writeString(imageUrl)
     }
 
     override fun describeContents(): Int {
