@@ -10,7 +10,9 @@ import com.example.newsnewshare.R
 import com.example.newsnewshare.databinding.FragmentCategoryBinding
 import com.example.newsnewshare.databinding.FragmentNewsBinding
 import com.example.newsnewshare.ui.activity.AddcategoryActivity
+import com.example.newsnewshare.ui.activity.AddnnewsActivity
 import com.example.newsnewshare.ui.activity.LogoutActivity
+import com.example.newsnewshare.ui.activity.NewsoutputActivity
 import com.example.newsnewshare.ui.activity.OutputActivity
 
 // TODO: Rename parameter arguments, choose names that match
@@ -53,6 +55,14 @@ class NewsFragment : Fragment() {
 
         binding.logoutbttnn.setOnClickListener {
             val intent = Intent(requireContext(), LogoutActivity        ::class.java)
+            startActivity(intent)
+        }
+        binding.btnaddnews.setOnClickListener {
+            val intent = Intent(requireContext(), AddnnewsActivity        ::class.java)
+            startActivity(intent)
+        }
+        binding.btnviewnews.setOnClickListener {
+            val intent = Intent(requireContext(), NewsoutputActivity        ::class.java)
             startActivity(intent)
         }
 
