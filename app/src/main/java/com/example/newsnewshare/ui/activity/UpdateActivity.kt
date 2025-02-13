@@ -26,7 +26,7 @@ class UpdateActivity : AppCompatActivity() {
         var repo = CategoryRepositoryImpl()
         categoryViewModel=CategoryViewModel(repo)
 
-        //
+
         var id : String= intent.getStringExtra("categoryiddd").toString()
 
         categoryViewModel.getCategoryById(id)

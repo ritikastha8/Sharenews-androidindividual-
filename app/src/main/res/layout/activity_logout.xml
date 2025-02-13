@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bggreen"
+    tools:context=".ui.activity.OutputActivity">
+
+    <ImageView
+        android:id="@+id/ddarKk"
+
+        android:layout_width="473dp"
+        android:layout_height="375dp"
+        android:layout_marginBottom="284dp"
+        android:src="@drawable/dashboardd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/llightT"
+
+        android:layout_width="445dp"
+        android:layout_height="356dp"
+        android:layout_marginBottom="640dp"
+        android:src="@drawable/backgroundlight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/whiteboximMage"
+        android:layout_width="370dp"
+        android:layout_height="603dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/whiterectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/greyYrect"
+        android:layout_width="314dp"
+        android:layout_height="426dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="220dp"
+        android:src="@drawable/greyrectangele"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/logouttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="176dp"
+        android:text="LOGOUT"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/logoutquestiontext"
+        android:layout_width="284dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:text="Do you want to Logout?"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/greyYrect"
+        app:layout_constraintTop_toTopOf="@+id/greyYrect" />
+
+    <Button
+        android:id="@+id/btnyes"
+        android:layout_width="124dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="@color/gg"
+        android:text="Yes"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="@+id/greyYrect"
+        app:layout_constraintTop_toBottomOf="@+id/logoutquestiontext" />
+
+    <Button
+        android:id="@+id/btnno"
+        android:layout_width="124dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/btnred"
+        android:text="No"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@+id/greyYrect"
+        app:layout_constraintTop_toBottomOf="@+id/logoutquestiontext" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
