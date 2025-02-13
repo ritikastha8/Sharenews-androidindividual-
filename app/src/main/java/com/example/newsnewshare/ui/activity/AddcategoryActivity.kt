@@ -1,5 +1,6 @@
 package com.example.newsnewshare.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -47,12 +48,33 @@ class AddcategoryActivity : AppCompatActivity() {
                 if(success){
                     Toast.makeText(this@AddcategoryActivity,
                         message, Toast.LENGTH_LONG).show()
+                    val intent= Intent(
+                        this@AddcategoryActivity,
+                        DashboardActivity::class.java)
+                    startActivity(intent)
                 }else{
                     Toast.makeText(this@AddcategoryActivity,
                         message, Toast.LENGTH_LONG).show()
+
                 }
             }
         }
+        addcategorybinding.btncancel.setOnClickListener {
+            Toast.makeText(this, "Add category cancelled", Toast.LENGTH_SHORT).show()
+            val intent= Intent(
+                this@AddcategoryActivity,
+                DashboardActivity::class.java)
+            startActivity(intent)
+
+        }
+        addcategorybinding.btnback.setOnClickListener {
+            val intent= Intent(
+                this@AddcategoryActivity,
+                DashboardActivity::class.java)
+            startActivity(intent)
+
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
