@@ -1,11 +1,17 @@
 package com.example.newsnewshare.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.newsnewshare.R
+import com.example.newsnewshare.databinding.FragmentCategoryBinding
+import com.example.newsnewshare.databinding.FragmentNewsBinding
+import com.example.newsnewshare.ui.activity.AddcategoryActivity
+import com.example.newsnewshare.ui.activity.LogoutActivity
+import com.example.newsnewshare.ui.activity.OutputActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,6 +24,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class NewsFragment : Fragment() {
+
+    private lateinit var binding: FragmentNewsBinding
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,7 +43,20 @@ class NewsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_news, container, false)
+        binding = FragmentNewsBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        binding.logoutbttnn.setOnClickListener {
+            val intent = Intent(requireContext(), LogoutActivity        ::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     companion object {
