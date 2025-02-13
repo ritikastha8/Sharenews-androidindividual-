@@ -26,6 +26,14 @@ class LogoutActivity : AppCompatActivity() {
                 LoginActivity::class.java)
             startActivity(intent)
         }
+
+        logoutBinding.btnno.setOnClickListener{
+            Toast.makeText(this, "Logout cancelled", Toast.LENGTH_SHORT).show()
+            val intent= Intent(
+                this@LogoutActivity,
+                DashboardActivity::class.java)
+            startActivity(intent)
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
