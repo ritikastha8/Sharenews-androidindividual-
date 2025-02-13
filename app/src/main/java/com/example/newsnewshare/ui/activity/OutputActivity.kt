@@ -1,5 +1,6 @@
 package com.example.newsnewshare.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -71,6 +72,15 @@ class OutputActivity : AppCompatActivity() {
             }
 
         }).attachToRecyclerView(binding.recyclerView)
+
+        binding.bbtnback.setOnClickListener {
+
+            val intent= Intent(
+                this@OutputActivity,
+                DashboardActivity::class.java)
+            startActivity(intent)
+
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
