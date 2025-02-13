@@ -11,6 +11,7 @@ import com.example.newsnewshare.adapter.CategoryAdapter
 import com.example.newsnewshare.databinding.FragmentCategoryBinding
 import com.example.newsnewshare.repository.CategoryRepositoryImpl
 import com.example.newsnewshare.ui.activity.AddcategoryActivity
+import com.example.newsnewshare.ui.activity.LogoutActivity
 import com.example.newsnewshare.ui.activity.OutputActivity
 import com.example.newsnewshare.viewmodel.CategoryViewModel
 import java.util.ArrayList
@@ -66,6 +67,11 @@ class CategoryFragment : Fragment() {
 
         binding.btnview.setOnClickListener {
             val intent = Intent(requireContext(), OutputActivity        ::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnloggout.setOnClickListener {
+            val intent = Intent(requireContext(), LogoutActivity        ::class.java)
             startActivity(intent)
         }
     }
