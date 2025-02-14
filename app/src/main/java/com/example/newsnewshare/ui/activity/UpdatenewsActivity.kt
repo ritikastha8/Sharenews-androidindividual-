@@ -1,5 +1,6 @@
 package com.example.newsnewshare.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -37,6 +38,15 @@ class UpdatenewsActivity : AppCompatActivity() {
             bindinng.editnewsname.setText(it?.newsNamee.toString())
             bindinng.edittcategorynamet.setText(it?.categoryNamme.toString())
             bindinng.editdescription.setText(it?.descrription.toString())
+        }
+
+        bindinng.bttnbback.setOnClickListener {
+
+            val intent= Intent(
+                this@UpdatenewsActivity,
+                NewsoutputActivity::class.java)
+            startActivity(intent)
+
         }
 
 
