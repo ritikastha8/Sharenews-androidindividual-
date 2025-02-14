@@ -31,8 +31,8 @@ class CategoryViewModel(val repo: CategoryRepository) {
 
 
 
-    fun getCategoryById(categoryId: String){
-        repo.getCategoryById(categoryId){
+    fun getCategoryById(categoryIddd: String){
+        repo.getCategoryById(categoryIddd){
                 model,success,message ->
             if (success){
                 _categories.value = model
