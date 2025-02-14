@@ -1,5 +1,6 @@
 package com.example.newsnewshare.ui.activity
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
@@ -58,6 +59,25 @@ class AddnnewsActivity : AppCompatActivity() {
 
         }
 
+        addnewsbinding.btnnbacck.setOnClickListener {
+            val intent= Intent(
+                this@AddnnewsActivity,
+                DashboardActivity::class.java)
+            startActivity(intent)
+
+        }
+
+
+        addnewsbinding.btncanccel.setOnClickListener {
+            Toast.makeText(this@AddnnewsActivity,
+                "Add News Cancelled ", Toast.LENGTH_LONG).show()
+            val intent= Intent(
+                this@AddnnewsActivity,
+                DashboardActivity::class.java)
+            startActivity(intent)
+
+        }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -95,12 +115,18 @@ class AddnnewsActivity : AppCompatActivity() {
                 if(success){
                     Toast.makeText(this@AddnnewsActivity,
                         message, Toast.LENGTH_LONG).show()
+                    val intent= Intent(
+                        this@AddnnewsActivity,
+                        DashboardActivity::class.java)
+                    startActivity(intent)
                 }else{
                     Toast.makeText(this@AddnnewsActivity,
                         message, Toast.LENGTH_LONG).show()
+
                 }
             }
         }
+
 
 
 }
