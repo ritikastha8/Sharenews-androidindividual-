@@ -19,9 +19,9 @@
 
             <ImageView
                 android:id="@+id/outputimage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                android:layout_width="290dp"
+                android:layout_height="127dp"
+                app:srcCompat="@drawable/iimage" />
 
 
             <TextView
