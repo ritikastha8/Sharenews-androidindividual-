@@ -18,6 +18,7 @@ import com.example.newsnewshare.ui.fragment.ProfileFragment
 
 class DashboardActivity : AppCompatActivity() {
     lateinit var dashboardBinding: ActivityDashboardBinding
+
 //    lateinit var adapter: dashboardAdapter
 
 

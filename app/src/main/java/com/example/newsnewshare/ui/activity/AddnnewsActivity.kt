@@ -108,7 +108,7 @@ class AddnnewsActivity : AppCompatActivity() {
             var categorynamme = addnewsbinding.categoryname1.text.toString()
             var descriptiion = addnewsbinding.descriptiion.text.toString()
 
-            var model = NewsModel("",newsname, categorynamme, descriptiion)
+            var model = NewsModel("",newsname, categorynamme, descriptiion,url)
 
             newsViewModel.addNews(model){
                     success,message->

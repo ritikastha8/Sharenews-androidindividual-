@@ -28,6 +28,9 @@ class UpdateActivity : AppCompatActivity() {
         categoryviewHolder=CategoryViewModel(repo)
 
 
+
+
+
         var id : String= intent.getStringExtra("categoryIddd").toString()
 
         categoryviewHolder.getCategoryById(id)
@@ -65,7 +68,8 @@ class UpdateActivity : AppCompatActivity() {
         bindinng.bttnback.setOnClickListener {
             val intent= Intent(
                 this@UpdateActivity,
-                OutputActivity::class.java)
+                OutputActivity
+                ::class.java)
             startActivity(intent)
 
         }
