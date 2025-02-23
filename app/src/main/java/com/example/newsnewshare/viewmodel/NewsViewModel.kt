@@ -41,17 +41,18 @@ class NewsViewModel(val repo:NewsRepository) {
         }
 
     }
+    var _loadingState = MutableLiveData<Boolean>()
+    var loadingState = MutableLiveData<Boolean>()
+        get() = _loadingState
 
-//    var _loading = MutableLiveData<Boolean>()
-//    var loading=MutableLiveData<Boolean>()
-//        get()=_loading
+
 
     fun getAllNewss(){
-//        _loading.value = true
+        _loadingState.value = true
         repo.getAllNewss(){news,success,message->
             if (success){
                 _allnews.value = news
-//                _loading.value = false
+                _loadingState.value = false
             }
         }
 

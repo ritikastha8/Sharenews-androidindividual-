@@ -41,17 +41,20 @@ class CategoryViewModel(val repo: CategoryRepository) {
 
     }
 
+    var _loadingState = MutableLiveData<Boolean>()
+    var loadingState = MutableLiveData<Boolean>()
+        get() = _loadingState
+
 //    var _loading = MutableLiveData<Boolean>()
 //    var loading=MutableLiveData<Boolean>()
 //        get()=_loading
 
     fun getAllCategories(){
-//        _loading.value = true
+        _loadingState.value = true
         repo.getAllCategories{category,success,message->
             if (success){
                 _allcategories.value = category
-//                _loading.value = false
-            }
+                _loadingState.value = false            }
         }
 
     }

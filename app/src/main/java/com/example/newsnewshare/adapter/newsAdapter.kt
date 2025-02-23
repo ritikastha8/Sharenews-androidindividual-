@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsnewshare.R
@@ -25,6 +26,8 @@ class newsAdapter(
         val ccName: TextView = itemView.findViewById(R.id.categorynametexti)
         val ndesc: TextView = itemView.findViewById(R.id.newsdesc)
         val editbttn: TextView = itemView.findViewById(R.id.lbllEdit)
+        val loading : ProgressBar = itemView.findViewById(R.id.progressBar6)
+
 
         //
         val imageView: ImageView = itemView.findViewById(R.id.outputimage)
@@ -46,6 +49,7 @@ class newsAdapter(
         holder.nName.text = data[position].newsNamee
         holder.ccName.text = data[position].categoryNamme
         holder.ndesc.text = data[position].descrription
+        holder.loading.visibility = View.GONE
 
         if (data[position].imageUrl.isEmpty()) {
             Picasso.get()

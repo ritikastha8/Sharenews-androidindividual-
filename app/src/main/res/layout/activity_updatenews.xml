@@ -111,7 +111,7 @@
       android:layout_marginStart="128dp"
       android:layout_marginTop="756dp"
       android:backgroundTint="@color/bggreen"
-      android:text="Edit Category"
+      android:text="Edit News"
       android:textSize="15sp"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
@@ -186,6 +186,14 @@
       app:layout_constraintStart_toStartOf="@+id/ggreyrect"
       app:layout_constraintTop_toBottomOf="@+id/editcateggorytext"
       tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+  <Spinner
+      android:id="@+id/spinner"
+      android:layout_width="375dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="92dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

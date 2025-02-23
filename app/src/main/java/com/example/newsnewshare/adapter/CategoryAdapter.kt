@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsnewshare.R
@@ -19,6 +20,7 @@ class CategoryAdapter (val context: Context,var data:ArrayList<CategoryModel>
         val cId: TextView = itemView.findViewById(R.id.categoryidtext)
         val cName: TextView = itemView.findViewById(R.id.categorynametext)
         val editbtn: TextView = itemView.findViewById(R.id.textedit)
+        val loading : ProgressBar = itemView.findViewById(R.id.progressBar2)
 
 
 
@@ -44,6 +46,7 @@ class CategoryAdapter (val context: Context,var data:ArrayList<CategoryModel>
 
         holder.cId.text=data[position].categoryId.toString()
         holder.cName.text=data[position].categoryNamee
+        holder.loading.visibility = View.GONE
         holder.editbtn.setOnClickListener{
             var intent = Intent(context,UpdateActivity::class.java)
             intent.putExtra("categoryIddd",data[position].categoryIddd)

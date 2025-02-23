@@ -41,6 +41,13 @@ class OutputActivity : AppCompatActivity() {
             }
 
         }
+        categoryViewModel.loadingState.observe(this){loading->
+            if(loading){
+                binding.progressBar.visibility = View.VISIBLE
+            }else{
+                binding.progressBar.visibility = View.GONE
+            }
+        }
 
 
 

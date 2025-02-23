@@ -2,6 +2,7 @@ package com.example.newsnewshare.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -44,6 +45,15 @@ class NewsoutputActivity : AppCompatActivity() {
             }
 
         }
+
+        newsViewModel.loadingState.observe(this){loading->
+            if(loading){
+                binding.progressBar4.visibility = View.VISIBLE
+            }else{
+                binding.progressBar4.visibility = View.GONE
+            }
+        }
+
         binding.recyclerView.adapter=adapter
         binding.recyclerView.layoutManager= LinearLayoutManager(this)
 
