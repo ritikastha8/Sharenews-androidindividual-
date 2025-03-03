@@ -93,17 +93,6 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/editnewsname" />
 
-  <EditText
-      android:id="@+id/edittcategorynamet"
-      android:layout_width="255dp"
-      android:layout_height="40dp"
-      android:layout_marginStart="80dp"
-      android:layout_marginTop="10dp"
-      android:ems="10"
-      android:inputType="text"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/cattegorynamet" />
-
   <Button
       android:id="@+id/btnnedittcategory"
       android:layout_width="167dp"
@@ -156,12 +145,12 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="80dp"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="17dp"
       android:text="Description"
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/edittcategorynamet" />
+      app:layout_constraintTop_toBottomOf="@+id/spinnerCategoryUpdate" />
 
   <EditText
       android:id="@+id/editdescription"
@@ -188,12 +177,13 @@
       tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
   <Spinner
-      android:id="@+id/spinner"
+      android:id="@+id/spinnerCategoryUpdate"
       android:layout_width="375dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="92dp"
+      android:layout_marginStart="76dp"
+      android:layout_marginTop="16dp"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toBottomOf="@+id/cattegorynamet" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

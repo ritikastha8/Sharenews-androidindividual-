@@ -80,7 +80,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnaddcategory"
+        android:id="@+id/btnaddcategorytt"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginStart="44dp"
@@ -117,5 +117,16 @@
             android:layout_height="wrap_content"
             android:hint="Category Id" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/displaytextcategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="364dp"
+        android:layout_marginTop="44dp"
+        android:text="TextView"
+        android:textSize="2sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnaddcategorytt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
