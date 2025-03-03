@@ -26,7 +26,7 @@ class UserRepositoryImpl : UserRepository {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-                    callback(true, "Login success")
+                    callback(true, "Login Successfull")
                 } else {
                     callback(false, it.exception?.message.toString())
                 }
