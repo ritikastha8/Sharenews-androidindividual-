@@ -15,6 +15,7 @@ import com.example.newsnewshare.databinding.ActivityAddcategoryBinding
 import com.example.newsnewshare.model.CategoryModel
 import com.example.newsnewshare.repository.CategoryRepositoryImpl
 import com.example.newsnewshare.viewmodel.CategoryViewModel
+import com.google.firebase.database.FirebaseDatabase
 import java.util.Locale.Category
 
 class AddcategoryActivity : AppCompatActivity() {
@@ -30,11 +31,11 @@ class AddcategoryActivity : AppCompatActivity() {
         setContentView(addcategorybinding.root)
 
 
-        var repo = CategoryRepositoryImpl()
+        var repo = CategoryRepositoryImpl(FirebaseDatabase.getInstance())
         categoryViewModel = CategoryViewModel(repo)
 
 
-        addcategorybinding.btnaddcategory.setOnClickListener {
+        addcategorybinding.btnaddcategorytt.setOnClickListener {
 
 
             var categroryyid = addcategorybinding.categoryid.text.toString().toInt()

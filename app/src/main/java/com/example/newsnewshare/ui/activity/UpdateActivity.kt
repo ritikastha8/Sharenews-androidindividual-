@@ -11,6 +11,7 @@ import com.example.newsnewshare.R
 import com.example.newsnewshare.databinding.ActivityUpdateBinding
 import com.example.newsnewshare.repository.CategoryRepositoryImpl
 import com.example.newsnewshare.viewmodel.CategoryViewModel
+import com.google.firebase.database.FirebaseDatabase
 
 class UpdateActivity : AppCompatActivity() {
 
@@ -24,7 +25,7 @@ class UpdateActivity : AppCompatActivity() {
         setContentView(bindinng.root)
 
 
-        var repo = CategoryRepositoryImpl()
+        var repo = CategoryRepositoryImpl(FirebaseDatabase.getInstance())
         categoryviewHolder=CategoryViewModel(repo)
 
 
@@ -32,14 +33,14 @@ class UpdateActivity : AppCompatActivity() {
 
 
         var id : String= intent.getStringExtra("categoryIddd").toString()
-
+       //To get code
         categoryviewHolder.getCategoryById(id)
         categoryviewHolder.categories.observe(this){
             bindinng.editcategorid.setText(it?.categoryId.toString())
             bindinng.editcategorynamett.setText(it?.categoryNamee.toString())
         }
 
-
+        //To update code
         bindinng.btneditcategory.setOnClickListener {
             val newCategoryId = bindinng.editcategorid.text.toString().toInt()
             val newCategoryName = bindinng.editcategorynamett.text.toString()

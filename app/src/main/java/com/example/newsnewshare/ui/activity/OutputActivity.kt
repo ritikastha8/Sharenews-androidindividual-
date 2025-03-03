@@ -16,6 +16,7 @@ import com.example.newsnewshare.adapter.CategoryAdapter
 import com.example.newsnewshare.databinding.ActivityOutputBinding
 import com.example.newsnewshare.repository.CategoryRepositoryImpl
 import com.example.newsnewshare.viewmodel.CategoryViewModel
+import com.google.firebase.database.FirebaseDatabase
 
 class OutputActivity : AppCompatActivity() {
 
@@ -28,7 +29,7 @@ class OutputActivity : AppCompatActivity() {
         binding=ActivityOutputBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var repo = CategoryRepositoryImpl()
+        var repo = CategoryRepositoryImpl(FirebaseDatabase.getInstance())
         categoryViewModel=CategoryViewModel(repo)
 
         adapter = CategoryAdapter(this@OutputActivity,ArrayList())

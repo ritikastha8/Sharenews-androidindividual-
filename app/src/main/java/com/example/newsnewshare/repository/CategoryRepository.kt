@@ -21,4 +21,6 @@ interface CategoryRepository {
 
     fun getAllCategories(callback:(List<CategoryModel>?,Boolean,String)->Unit)
 
+
+
 }

@@ -22,6 +22,7 @@ class NewsRepositoryImpl:NewsRepository {
     val database: FirebaseDatabase = FirebaseDatabase.getInstance()
     val ref: DatabaseReference =database.reference.child("news")
 
+
     override fun addNews(newsModel: NewsModel, callback: (Boolean, String) -> Unit) {
         var id = ref.push().key.toString()
         newsModel.newsidd=id

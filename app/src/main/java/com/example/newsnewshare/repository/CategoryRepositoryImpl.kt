@@ -1,16 +1,17 @@
 package com.example.newsnewshare.repository
 
 import com.example.newsnewshare.model.CategoryModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class CategoryRepositoryImpl :CategoryRepository {
+class CategoryRepositoryImpl (val database : FirebaseDatabase):CategoryRepository {
 
 
-    val database:FirebaseDatabase=FirebaseDatabase.getInstance()
+//    val database:FirebaseDatabase=FirebaseDatabase.getInstance()
     val ref:DatabaseReference=database.reference.child("categories")
 
 

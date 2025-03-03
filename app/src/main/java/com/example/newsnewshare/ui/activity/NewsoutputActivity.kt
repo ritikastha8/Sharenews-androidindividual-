@@ -38,6 +38,11 @@ class NewsoutputActivity : AppCompatActivity() {
         adapter = newsAdapter(this@NewsoutputActivity,ArrayList())
 
         newsViewModel.getAllNewss()
+//        newAdapter = newsAdapter(
+//            this@NewsoutputActivity,
+//            ArrayList()
+//        )
+
 
         newsViewModel.allnews.observe(this){news->
             news?.let{

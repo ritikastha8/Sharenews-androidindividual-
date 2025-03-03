@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsnewshare.R
@@ -23,9 +24,11 @@ class newsAdapter(
         RecyclerView.ViewHolder(itemView) {
         //sample news
         val nName: TextView = itemView.findViewById(R.id.newsname)
-        val ccName: TextView = itemView.findViewById(R.id.categorynametexti)
+//        val ccName: TextView = itemView.findViewById(R.id.categorynametexti)
         val ndesc: TextView = itemView.findViewById(R.id.newsdesc)
         val editbttn: TextView = itemView.findViewById(R.id.lbllEdit)
+        //spinner
+        val spinner: TextView = itemView.findViewById(R.id.spinnertext)
         val loading : ProgressBar = itemView.findViewById(R.id.progressBar6)
 
 
@@ -46,9 +49,12 @@ class newsAdapter(
 
     override fun onBindViewHolder(holder: newsAdapter.newsViewHolder, position: Int) {
 
+
         holder.nName.text = data[position].newsNamee
-        holder.ccName.text = data[position].categoryNamme
+        holder.spinner.text = data[position].categoryNamme
         holder.ndesc.text = data[position].descrription
+        //spinner
+        //holder.categ.
         holder.loading.visibility = View.GONE
 
         if (data[position].imageUrl.isEmpty()) {
